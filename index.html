@@ -1,563 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-  <meta charset="utf-8">
-  <title>Computational Physics Group</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
-
-  <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
-  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
-
-  <!-- Bootstrap CSS File -->
-  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Libraries CSS Files -->
-  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-  <link href="lib/animate/animate.min.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-
-  <!-- Main Stylesheet File -->
-  <link href="css/style.css" rel="stylesheet">
-
-  <!-- =======================================================
-    Theme Name: Reveal
-    Theme URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
-    Author: BootstrapMade.com
-    License: https://bootstrapmade.com/license/
-  ======================================================= -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>EPIC V - Dorothy Coding Challenge 2025</title>
+    <meta name="description" content="Programming school with coding challenge from August 4th to 8th, 2025.">
+    <meta name="author" content="CodeCraft Academy">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link href="css/animate.css" rel="stylesheet" media="screen">
+    <link href="flexslider/flexslider.css" rel="stylesheet" />
+    <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="font/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* Style additions for the coding challenge */
+        .challenge-stage {
+            padding: 2em;
+            margin-bottom: 2em;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .challenge-stage h3 {
+            color: #6a11cb;
+            margin-bottom: 1em;
+        }
+    </style>
 </head>
 
-<body id="body">
-
-  <!--==========================
-    Top Bar
-  ============================-->
-  <section id="topbar" class="d-none d-lg-block">
-    <div class="container clearfix">
-      <div class="contact-info float-left">
-        <i class="fa fa-envelope-o"></i> <a href="mailto:wbandabarragan@gmail.com">wbandabarragan@gmail.com</a>
-        <i class="fa fa-phone"></i> +593994745221
-      </div>
-      <div class="social-links float-right">
-        <a href="https://x.com/wbandabarragan" class="twitter"><i class="fa fa-twitter"></i></a>
-        <!--<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>-->
-        <!--<a href="#" class="instagram"><i class="fa fa-instagram"></i></a>-->
-        <!--<a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>-->
-        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <!--==========================
-    Header
-  ============================-->
-  <header id="header">
+<body>
+<header class="header">
     <div class="container">
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand scroll-top logo animated bounceInLeft"><b><i>CodeCraft</i></b></a>
+            </div>
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav" id="mainNav">
+                    <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a></li>
+                    <li><a href="#challenge" class="scroll-link">Coding Challenge</a></li>
+                    <li><a href="#courses" class="scroll-link">Courses</a></li>
+                    <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
+                    <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
 
-      <div id="logo" class="pull-left">
-        <h1><a href="#body" class="scrollto">c<span>Phys+</span></a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#body">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#portfolio">Research</a></li>
-          <li><a href="#team">Team</a></li>
-          <!--<li class="menu-has-children"><a href="">Drop Down</a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
+<section id="home">
+    <div class="banner-container">
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="images/slides/1.jpg" alt="Programming school image" />
+                    <div class="flex-caption">
+                        <h3>Welcome to CodeCraft Academy</h3>
+                        <p>Get ready for the coding challenge from August 4th to 8th, 2025.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/slides/2.jpg" alt="Coding challenge image" />
+                    <div class="flex-caption">
+                        <h3>Challenge your programming skills</h3>
+                        <p>Test your abilities and win fantastic prizes.</p>
+                    </div>
+                </li>
             </ul>
-          </li>-->
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav><!-- #nav-menu-container -->
+        </div>
     </div>
-  </header><!-- #header -->
-
-  <!--==========================
-    Intro Section
-  ============================-->
-  <section id="intro">
-
-    <div class="intro-content">
-      <h2>Studying the <span>Universe</span><br>through <span>physics</span> and <span>computing</span></h2>
-      <div>
-        <a href="#about" class="btn-get-started scrollto">About Us</a>
-        <a href="#portfolio" class="btn-projects scrollto">Research</a>
-      </div>
+    <div class="container hero-text2">
+        <h3>Join us for a unique and stimulating learning experience.</h3>
     </div>
+</section>
 
-    <div id="intro-carousel" class="owl-carousel" >
-      <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>
-    </div>
-
-  </section><!-- #intro -->
-
-  <main id="main">
-
-    <!--==========================
-      About Section
-    ============================-->
-    <section id="about" class="wow fadeInUp">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 about-img">
-            <img src="img/about-img.jpg" alt="">
-          </div>
-
-          <div class="col-lg-6 content">
-            <h2>Welcome to cPhys+!</h2>
-            <h3>This website contains information on the Computational Physics Plus (cPhys+) Research Group currently based @ Yachay Tech University in Ecuador. Here you will find information on our activities:</h3>
-
-            <ul>
-              <li><i class="ion-android-checkmark-circle"></i> Research projects.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Software packages.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Teaching resources.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Outreach activities.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Scientific events.</li>
-              <li><i class="ion-android-checkmark-circle"></i> Members and collaborators.</li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #about -->
-
-    <!--==========================
-      News Section
-    ============================-->
-    <section id="testimonials" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>News</h2>
-          <p>Have a look at our recent research, software development efforts and outreach projects.</p>
-        </div>
-        <div class="owl-carousel testimonials-carousel">
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Our new paper on hydrodynamic shielding in galactic outflows, led by Andrés Villares, is out in the MNRAS journal <a href="https://academic.oup.com/mnras/article/535/1/1163/7829280">(Hydro Shielding Paper)</a>.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
-              <h3>Andrés Villares</h3>
-              <h4>October 2024</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Our new cPhys+ group website is finally online. The site will be frequently updated and will contain a broad range of materials devoted to promoting computational physics and its applications.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
-              <h3>Wladimir Banda-Barragán</h3>
-              <h4>October 2024</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Our new proceedings paper on starburst heating in galactic winds, led by Daniel Villarruel, is out on arXiv <a href="https://arxiv.org/abs/2411.08704">(Starburst Heating Paper)</a>.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
-              <h3>Daniel Villarruel</h3>
-              <h4>November 2024</h4>
-            </div>
-<!--==========================
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
-            </div>
-
-            <div class="testimonial-item">
-              <p>
-                <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
-              </p>
-              <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
-            </div>
-============================-->
-        </div>
-
-      </div>
-    </section><!-- #news -->
-
-
-    <!--==========================
-      Activities and Resources
-    ============================-->
-    <section id="projects">
-      <div class="container">
-        <div class="section-header">
-          <h2>Projects</h2>
-          <p>Please find below some of our projects related to software development, teaching resources, outreach activities and scientific events.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft">
-              <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="">Research</a></h4>
-              <p class="description">We work at the interface between fluid dynamics, computing and astrophysics.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight">
-              <div class="icon"><i class="fa fa-picture-o"></i></div>
-              <h4 class="title"><a href="">Software</a></h4>
-              <p class="description">We are currently developing python packages devoted to shock tracking and starburst heating for (magneto)hydrodynamical simulations.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="fisica-interactiva.html">Interactive Physics in Spanish</a></h4>
-              <p class="description"> We are also committed to developing computational resources for teaching physics.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInRight" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-map"></i></div>
-              <h4 class="title"><a href="comp_phys_club.html">Computational Physics Club</a></h4>
-              <p class="description">Website of our student club.</p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
-              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
-              <h4 class="title"><a href="simposio-fisica.html">Scientific Events</a></h4>
-              <p class="description"> <a href="simposio-fisica.html">I Simposio de Física Teórica</a></p>
-              <p class="description"> <a href="simposio-fisica.html">II Simposio de Física Teórica y Computacional</a></p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #projects -->
-    
-    <!--==========================
-      Our Portfolio Section
-    ============================-->
-    <section id="portfolio" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Our Research</h2>
-          <p>These are our main projects. We develop physical models and software dedicated to solving problems in physics, astronomy and related sciences.</p>
-        </div>
-      </div>
-
-      <div class="container">
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/1.jpg" class="portfolio-popup">
-                <img src="img/portfolio/1.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Wind-cloud Models</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/2.jpg" class="portfolio-popup">
-                <img src="img/portfolio/2.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Hydrodynamic Shielding</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/3.jpg" class="portfolio-popup">
-                <img src="img/portfolio/3.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Starburst Heating</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/4.jpg" class="portfolio-popup">
-                <img src="img/portfolio/4.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Turbulence</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/5.jpg" class="portfolio-popup">
-                <img src="img/portfolio/5.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Shock waves</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/6.jpg" class="portfolio-popup">
-                <img src="img/portfolio/6.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Synthetic spectra</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/7.jpg" class="portfolio-popup">
-                <img src="img/portfolio/7.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 7</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/8.jpg" class="portfolio-popup">
-                <img src="img/portfolio/8.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 8</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- #portfolio -->
-
-    <!--==========================
-      Home Institution
-    ============================-->
-
-    <section id="clients" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Home Institution</h2>
-          <p>We are currently based @ the School of Physics and Nanotechnology @ Universidad Yachay Tech in Ecuador.</p>
-          <p>If you would like to know more about our home instituion, visit the <a href="https://yachaytech.edu.ec">Yachay Tech website</a></p>
-        </div>
-
-        <div class="owl-carousel clients-carousel">
-          <img src="img/home-institution/client-1.png" alt="">
-          <img src="img/home-institution/client-2.png" alt="">
-          <img src="img/home-institution/client-3.png" alt="">
-          <img src="img/home-institution/client-4.png" alt="">
-          <img src="img/home-institution/client-5.png" alt="">
-          <img src="img/home-institution/client-6.png" alt="">
-          <img src="img/home-institution/client-7.png" alt="">
-          <img src="img/home-institution/client-8.png" alt="">
-        </div>
-
-      </div>
-    </section><!-- #clients -->
-
-    <!--==========================
-      Our Team Section
-    ============================-->
-    <section id="team" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Current and Former Team Members</h2>
-        </div>
-        <div class="row">
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-1.jpg" alt=""></div>
-              <div class="details">
-                <h4>Andrés Villares</h4>
-                <span>Erasmus Mundus MSc Student</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-2.jpg" alt=""></div>
-              <div class="details">
-                <h4>Osmer Suárez-López</h4>
-                <span>Physicist</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-3.jpg" alt=""></div>
-              <div class="details">
-                <h4>Bryan Pinargote</h4>
-                <span>Physicist</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6">
-            <div class="member">
-              <div class="pic"><img src="img/team-4.jpg" alt=""></div>
-              <div class="details">
-                <h4>Daniel Villarruel</h4>
-                <span>Undergrad Physics Student</span>
-                <div class="social">
-                  <a href=""><i class="fa fa-twitter"></i></a>
-                  <a href=""><i class="fa fa-linkedin"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- #team -->
-
-    <!--==========================
-      Contact Section
-    ============================-->
-    <section id="contact" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Contact Us</h2>
-          <p>Feel free to contact us via email.</p>
-        </div>
-
-        <div class="row contact-info">
-
-          <div class="col-md-4">
-            <div class="contact-address">
-              <i class="ion-ios-location-outline"></i>
-              <h3>Address</h3>
-              <address>Hacienda San Jose, Urcuqui, Ecuador</address>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-phone">
-              <i class="ion-ios-telephone-outline"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+593994745221">+593 9 9474 5221</a></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <div class="contact-email">
-              <i class="ion-ios-email-outline"></i>
-              <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </section><!-- #contact -->
-
-  </main>
-
-  <!--==========================
-    Footer
-  ============================-->
-  <footer id="footer">
+<section id="challenge" class="page-section">
     <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Reveal</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Reveal
-        -->
-        <a href="https://bootstrapmade.com/">Free Bootstrap Templates</a> by BootstrapMade
-      </div>
+        <div class="heading text-center">
+            <h2>Coding Challenge 2025</h2>
+            <p>From August 4th to 8th, 2025, challenge yourself and demonstrate your programming skills.</p>
+        </div>
+        <div class="challenge-stage">
+            <h3>Preliminary Stage 1</h3>
+            <p>Description of the first preliminary stage of the coding challenge.</p>
+        </div>
+        <div class="challenge-stage">
+            <h3>Preliminary Stage 2</h3>
+            <p>Description of the second preliminary stage of the coding challenge.</p>
+        </div>
+        <div class="challenge-stage">
+            <h3>Final Stage</h3>
+            <p>Description of the final stage of the coding challenge.</p>
+        </div>
     </div>
-  </footer><!-- #footer -->
+</section>
 
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<section id="courses" class="page-section colord">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="images/1.png" alt="Design course icon" /></i>
+                <h3>Web Design</h3>
+                <p>Learn to create captivating and functional user interfaces.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="images/2.png" alt="Development course icon" /></i>
+                <h3>Web Development</h3>
+                <p>Master programming languages to build dynamic websites.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="images/3.png" alt="Marketing course icon" /></i>
+                <h3>Digital Marketing</h3>
+                <p>Discover strategies to promote your projects online.</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="circle"><img src="images/4.png" alt="Global IT course icon" /></i>
+                <h3>Global IT</h3>
+                <p>Explore the latest trends in the world of information technology.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- JavaScript Libraries -->
-  <script src="lib/jquery/jquery.min.js"></script>
-  <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
-  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>-->
-  <!-- Contact Form JavaScript File -->
-  <script src="contactform/contactform.js"></script>
+<section id="aboutUs">
+    <div class="container">
+        <div class="heading text-center">
+            <h2>About Us</h2>
+            <p>CodeCraft Academy is a cutting-edge programming school that offers high-quality courses and unique learning opportunities.</p>
+        </div>
+        <div class="row feature design">
+            <div class="area1 columns right">
+                <h3>Clean and Modern Design</h3>
+                <p>Our website is designed to provide you with an intuitive and enjoyable browsing experience.</p>
+                <a href="#" class="btn">Read More</a>
+            </div>
+            <div class="area2 columns feature-media left">
+                <img src="images/feature-img-1.png" alt="School image" width="100%">
+            </div>
+        </div>
+        <div class="row dataTxt">
+            <div class="col-md-4 col-sm-6">
+                <h4>Our Mission</h4>
+                <p>To train the programmers of the future through quality education and a practical approach.</p>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h4>Our Courses</h4>
+                <ul class="listArrow">
+                    <li>Full-Stack Web Development</li>
+                    <li>Data Science with Python</li>
+                    <li>Mobile App Development</li>
+                    <li>Artificial Intelligence</li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <h4>Our Values</h4>
+                <p>Innovation, excellence, collaboration, and passion for technology.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <!-- Template Main Javascript File -->
-  <script src="js/main.js"></script>
-
-</body>
-</html>
+<section id="contactUs" class="contact-parlex">
+    <div class="parlex-back">
+        <div class="container">
+            <div class="row">
+                <div class="heading text-center">
+                    <h2>Contact Us</h2>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+                </div>
+            </div>
+            <div class="row mrgn30">
+                <div class="col-sm-7">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)">
+                    </div>
