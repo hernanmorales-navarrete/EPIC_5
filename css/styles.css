@@ -1164,7 +1164,7 @@ nav#filter li {
 }
 
 /* Container for columns */
-.row {
+#application .row {
     display: flex;
     justify-content: space-between; /* Ensures equal spacing */
     align-items: stretch; /* Makes all columns the same height */
@@ -1172,7 +1172,7 @@ nav#filter li {
 }
 
 /* Styling for each column */
-.column {
+#application .column {
     flex: 1; /* Ensures equal width */
     padding: 20px;
     color: white; /* Sets text color to white */
@@ -1181,13 +1181,13 @@ nav#filter li {
 }
 
 /* Background colors for each stage */
-.column:nth-child(1) { background-color: #1976d2; } /* Blue */
-.column:nth-child(2) { background-color: #388e3c; } /* Green */
-.column:nth-child(3) { background-color: #d32f2f; } /* Red */
+#application .column:nth-child(1) { background-color: #1976d2; } /* Blue */
+#application .column:nth-child(2) { background-color: #388e3c; } /* Green */
+#application .column:nth-child(3) { background-color: #d32f2f; } /* Red */
 
 /* Make the columns responsive */
 @media (max-width: 768px) {
-    .row {
+    #application .row {
         flex-direction: column; /* Stack columns vertically on smaller screens */
     }
 }
