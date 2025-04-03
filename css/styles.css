@@ -451,16 +451,16 @@ float: none;
 	border: 2px solid rgba(255, 255, 255, 0.6);
 }
 
-.secPad {
+/*.secPad {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
     padding-top: 0px !important;
     padding-bottom: 0px !important;
-}
-
-/*.secPad {
-	padding: 60px 0;
 }*/
+
+.secPad {
+	padding: 60px 0;
+/
 /*Intro Content*/
 #introText {
 	padding: 50px 0;
