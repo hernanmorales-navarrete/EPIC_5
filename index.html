@@ -234,17 +234,33 @@
   </div>
 </section>
 <!--About-->
-<section id="aboutEPIC">
+<section id="aboutEPIC" style="padding: 40px 0;">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 tileBox animate__animated animate__slideInLeft">
-        <img src="images/uide_01.jpg" alt="me" />
+      <div class="col-md-4 tileBox animate__animated animate__slideInLeft text-center">
+        <img src="images/uide_01.jpg" alt="General Information Image" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
       </div>
       <div class="col-md-8 tileBox animate__animated animate__slideInRight">
         <div class="txtHead">
-          <h2 class="animate-on-scroll delay-1">General Information</h2>
+          <h2 style="text-align: center; margin-bottom: 20px;">General Information</h2>
         </div>
-        <p>The 5th edition of EPIC will focus on introducing computational techniques...</p>
+        <p style="font-size: 16px; line-height: 1.8; text-align: justify;">
+          The 5th edition of EPIC will focus on introducing computational techniques for the analysis of scientific data and images by using programming languages such as Python, MATLAB, and Mathematica as tools. Instructors will present real research problems to illustrate the use of computational tools in the experimental or theoretical study of physical systems. Basic programming notions are essential to sign up for this workshop.
+        </p>
+        <h3 style="margin-top: 20px; text-align: center;">The tutorials will focus on the following areas:</h3>
+        <ul style="font-size: 16px; line-height: 1.8; margin-top: 10px; padding-left: 20px;">
+          <li>Data and image analysis</li>
+          <li>Machine learning</li>
+          <li>Astrophysics and cosmology</li>
+          <li>Biophysics</li>
+          <li>Particle physics</li>
+          <li>Materials science</li>
+          <li>Fluid dynamics</li>
+        </ul>
+        <p style="font-size: 16px; line-height: 1.8; margin-top: 20px; text-align: justify;">
+          EPIC 5 is kindly supported and funded by ICTP’s Physics Without Frontiers (PWF) program and UNESCO-Quito. If you would like to know more about the PWF team, please have a look at their ongoing and previous projects:
+          <a href="https://www.ictp.it/home/physics-without-frontiers" target="_blank" style="color: #3498db; text-decoration: underline;">Physics Without Frontiers (PWF) Program</a>.
+        </p>
       </div>
     </div>
   </div>
@@ -330,18 +346,76 @@
   </div>
 </section>
 
-<!--registration-->
-<section id="registration" class="secPad" style="margin-top: 5px; margin-bottom: 5px; padding-top: 10px; padding-bottom: 10px;">
+<section id="evaluationMethodology" class="secPad white" style="margin-top: 5px; padding-bottom: 10px;">
   <div class="container">
     <div class="heading animate__animated animate__fadeIn">
-      <h2>Registration</h2>
-      <h4>Registration is now open.</h4>
-      <p>We welcome applications from undergraduate students...</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSevJ9hGuDj8K0xPC8_1JOenec4DZY2Pg4j24Sq-NuruOR0XIw/viewform?usp=dialog" target="_blank" class="btn btn-primary btn-lg animate__animated animate__zoomIn">
-        Register Here
-      </a>
+      <h4>Evaluation Methodology</h4>
+      <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Insufficient (0 Points)</th>
+            <th>Fair (1 Point)</th>
+            <th>Good (2 Points)</th>
+            <th>Excellent (3 Points)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Correctness (30%)</td>
+            <td>Solution appears unrelated to the problem.</td>
+            <td>Solution might address the challenge with substantial modifications.</td>
+            <td>Solution appears to solve the problem.</td>
+            <td>Solution solves the problem and provides additional benefits.</td>
+          </tr>
+          <tr>
+            <td>Sophistication (30%)</td>
+            <td>Overly simplistic solution.</td>
+            <td>Minimally complex, addressing few constraints.</td>
+            <td>Moderately complex, addressing some constraints.</td>
+            <td>Successfully identifies and addresses key constraints.</td>
+          </tr>
+          <tr>
+            <td>Implementation (30%)</td>
+            <td>Not possible to implement.</td>
+            <td>Possible to implement with substantial modifications.</td>
+            <td>Possible to implement with minor modifications.</td>
+            <td>Readily implementable.</td>
+          </tr>
+          <tr>
+            <td>Coherence (10%)</td>
+            <td>Unorganized and unclear language.</td>
+            <td>Requires substantial revision.</td>
+            <td>Logically arranged, minimal revision needed.</td>
+            <td>Highly comprehensible, no revision needed.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
+</section>
+
+<!--registration-->
+<section id="registration" class="secPad" style="margin-top: 20px; padding: 20px 0; background-color: #f9f9f9;">
+  <div class="container">
+    <div class="heading"> 
+      <h2>Registration</h2>
+      <p style="font-size: 16px; line-height: 1.8;">
+        Registration is now open! We welcome applications from undergraduate and MSc students in natural or computer sciences who wish to expand their scientific computing skills. Preference will be given to applicants from Latin American countries and students who have not participated in previous editions of EPIC.
+      </p>
+      <p style="font-size: 16px; line-height: 1.8;">
+        We are committed to reducing the gender gap in academia. Half of our scholarships will be allocated to female applicants. Female students are particularly encouraged to apply, and we will host a dedicated session on Women in STEM as part of EPIC 5.
+      </p>
+      <p style="font-size: 16px; line-height: 1.8;">
+        To complete your registration, please click the button below:
+      </p>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSevJ9hGuDj8K0xPC8_1JOenec4DZY2Pg4j24Sq-NuruOR0XIw/viewform?usp=dialog" target="_blank" class="btn btn-primary btn-lg">
+          Register Here
+        </a>
+      </div>
+    </div>
+  </div>		
 </section>
 
 <!--venue-->
@@ -363,52 +437,40 @@
   <div class="col-md-4 tileBox"> <img src="images/uide_campus_2.jpg" alt="me"/> </div>
 </div>
 
-<div class="row"> 
-    <h3>Website</h3>
-    <p><a href="https://www.uide.edu.ec/" target="_blank">Visit UIDE Website</a></p>
-
-    <h3>Event Details</h3>
-    <ul>
-        <li><strong>School Dates:</strong> 4-8th August 2025</li>
-        <li><strong>Format:</strong> In person</li>
-        <li><strong>Duration:</strong> 5 days</li>
-        <li><strong>Time investment:</strong> 40 hours</li>
-        <li><strong>Cost:</strong> There is no registration fee</li>
-    </ul>
-
-    <h3>Deadline</h3>
-    <p>The applications for EPIC 5 are open until <strong>30th April 2025</strong>.</p>
-
+<div class="row">
+    <h3>Interactive Map</h3>
+    <div style="width: 100%; height: 400px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7815465074127!2d-78.47110212420631!3d-0.24599759975157964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d597638b0399b7%3A0x6584fbf0c60146da!2sUniversidad%20Internacional%20del%20Ecuador%20-%20UIDE%20Quito!5e0!3m2!1ses-419!2sec!4v1744081592806!5m2!1ses-419!2sec" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
 </div>
 
-<div class="row">
-    <h3>ORGANIZED BY</h3>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/photo-1.jpg" width="180" alt="Name">
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/LOGOTIPO-YACHAY-TECH-UITEY-2023.png" width="300" alt="Name">
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/udla_2.png" width="350" alt="Name">
-	</div>
+<div class="row text-center" style="padding: 20px 0;">
+  <h3 style="margin-bottom: 20px;">Organized By</h3>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: nowrap;">
+    <img src="images/photo-1.jpg" width="180" alt="Name">
+    <img src="images/LOGOTIPO-YACHAY-TECH-UITEY-2023.png" width="300" alt="Name">
+    <img src="images/udla_2.png" width="350" alt="Name">
+    <img src="images/uide.png" width="200" alt="Name">
+    <img src="images/club_logo.png" width="200" alt="Name">
+  </div>
 </div>		
 
-<div class="row">
-	<div class="col-md-3 col-sm-6">
-		<img src="images/uide.png" width="200" alt="Name">
-	</div>
-</div>		
+<div class="row text-center" style="padding: 20px 0;">
+  <h3 style="margin-bottom: 20px;">With the Kind Support Of</h3>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: nowrap;">
+    <img src="images/UNESCO_logo_hor_blue.png" width="250" alt="Name">
+    <img src="images/pwf-bw.png" width="250" alt="Name">
+  </div>
+</div>
 
-<div class="row">
-    <h3>WITH THE KIND SUPPORT OF</h3>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/UNESCO_logo_hor_blue.png" width="250" alt="Name">
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/pwf-bw.png" width="250" alt="Name">
-	</div>
-</div>		
 </section>
 
 <!--Mentors-->
