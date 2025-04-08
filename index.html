@@ -27,6 +27,148 @@
 <link rel="stylesheet" href="css/styles.css" />
 <!-- Font Awesome -->
 <link href="css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+<style>
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #3498db;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+
+    .timeline-container {
+      padding: 10px 40px;
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      box-sizing: border-box;
+    }
+
+    .timeline-container::after {
+      content: '';
+      position: absolute;
+      width: 25px;
+      height: 25px;
+      right: -17px;
+      background-color: white;
+      border: 4px solid #3498db;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    .left {
+      left: 0;
+    }
+
+    .right {
+      left: 50%;
+    }
+
+    .left::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      right: 30px;
+      border: medium solid #f1f1f1;
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent #f1f1f1;
+    }
+
+    .right::before {
+      content: " ";
+      height: 0;
+      position: absolute;
+      top: 22px;
+      width: 0;
+      z-index: 1;
+      left: 30px;
+      border: medium solid #f1f1f1;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent #f1f1f1 transparent transparent;
+    }
+
+    .right::after {
+      left: -16px;
+    }
+
+    .timeline-content {
+      padding: 20px 30px;
+      background-color: white;
+      position: relative;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .timeline-content:hover {
+      transform: scale(1.03);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .timeline-content h2 {
+      color: #3498db;
+      margin-top: 0;
+    }
+
+    .timeline-content .date {
+      color: #777;
+      font-style: italic;
+    }
+
+    .timeline-content .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .timeline-content.active .details {
+      max-height: 500px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .timeline::after {
+        left: 31px;
+      }
+
+      .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline-container::before {
+        left: 60px;
+        border: medium solid #f1f1f1;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #f1f1f1 transparent transparent;
+      }
+
+      .left::after, .right::after {
+        left: 15px;
+      }
+
+      .right {
+        left: 0%;
+      }
+    }
+</style>
 </head>
 
 <body>
@@ -34,8 +176,13 @@
   <div class="container">
     <nav class="navbar navbar-inverse" role="navigation">
       <div class="navbar-header">
-        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        </div>
+        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> 
+          <span class="sr-only">Toggle navigation</span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+          <span class="icon-bar"></span> 
+        </button>
+      </div>
       <!--/.navbar-header-->
       <div id="main-nav" class="collapse navbar-collapse">
         <ul class="nav navbar-nav" id="mainNav">
@@ -56,61 +203,65 @@
 <!--/.header-->
 <div id="#top"></div>
 <section id="home">
-  <div class="banner-container"> <img src="images/banner-bg.jpg" alt="banner" />
-    <div class="container banner-content"> 
-            <div class="row">
-                <header class="centered">
-                    <h1>EPIC V + Dorothy Coding Challenge</h1>
-                    <p>Programming School and Dorothy Coding Challenge</p>
-                </header>
-                <div class="social-icons">
-                        <a href="https://x.com/cienciaLatitud0"><i class="fa fa-twitter"></i></a>
-                        <a href="https://www.facebook.com/CienciaLatitud0"><i class="fa fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fa fa-pinterest"></i></a>
-                </div>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSevJ9hGuDj8K0xPC8_1JOenec4DZY2Pg4j24Sq-NuruOR0XIw/viewform?usp=dialog" class="hireMe">Apply</a>
-            </div> 
+  <div class="banner-container parallax" data-speed="0.3">
+    <img src="images/banner-bg.jpg" alt="banner" />
+    <div class="container banner-content animate__animated animate__zoomIn">
+      <div class="row">
+        <header class="centered">
+          <h1>EPIC V + Dorothy Coding Challenge</h1>
+          <p>Programming School and Dorothy Coding Challenge</p>
+        </header>
+        <div class="social-icons">
+          <a href="https://x.com/cienciaLatitud0"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.facebook.com/CienciaLatitud0"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-pinterest"></i></a>
+        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSevJ9hGuDj8K0xPC8_1JOenec4DZY2Pg4j24Sq-NuruOR0XIw/viewform?usp=dialog" class="hireMe animate__animated animate__pulse animate__infinite">Apply</a>
+      </div>
+    </div>
   </div>
 </section>
 <section id="introText">
   <div class="container">
-    <div>
+    <div class="animate__animated animate__fadeIn">
       <h1>V Escuela de Programación para Investigación Científica (EPIC)</h1>
-      <h2>"School of Programming for Scientific Research - EPIC V: Bridging Empirical Data and Simulations – From Astrophysics to Computational Biophysics"</h2>
-        <p>The Physics Without Frontiers (PWF) programme of the the Abdus Salam International Centre for Theoretical Physics (ICTP) and the United Nations Educational, Scientific and Cultural Organization (UNESCO), in collaboration with Grupo de Investigadores Latitud Cero, Universidad Yachay Tech, Universidad Internacional del Ecuador (UIDE) and Universidad de la Américas (UDLA), have the pleasure to invite students to participate in the EPIC + Dorothy Coding Challenge.</p>
+      <h2 class="animate-on-scroll delay-1">"School of Programming for Scientific Research - EPIC V: Bridging Empirical Data and Simulations – From Astrophysics to Computational Biophysics"</h2>
+      <p>The Physics Without Frontiers (PWF) programme of the the Abdus Salam International Centre for Theoretical Physics (ICTP) and the United Nations Educational, Scientific and Cultural Organization (UNESCO), in collaboration with Grupo de Investigadores Latitud Cero, Universidad Yachay Tech, Universidad Internacional del Ecuador (UIDE) and Universidad de la Américas (UDLA), have the pleasure to invite students to participate in the EPIC + Dorothy Coding Challenge.</p>
 </br>
 <p>The EPIC + Dorothy Coding Challenge is a scientific programming contest aimed at motivating BSc and Master students in Ecuador to pursue careers that combine computer science with natural sciences (physics, in particular). Students who participate in this year's edition will have the opportunity to team up with a peer and together demonstrate their Python coding abilities to solve tricky problems related to scientific computing.</p>
     </div>
   </div>
 </section>
 <!--About-->
-<section id="aboutEPIC">
+<section id="aboutEPIC" style="padding: 40px 0;">
   <div class="container">
-    <div class="row"> 
-      <!-- item -->
-      <div class="col-md-4 tileBox"> <img src="images/uide_01.jpg" alt="me"/> </div>
-      <div class="col-md-8 tileBox">
+    <div class="row">
+      <div class="col-md-4 tileBox animate__animated animate__slideInLeft text-center">
+        <img src="images/uide_01.jpg" alt="General Information Image" style="width: 100%; max-width: 300px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);" />
+      </div>
+      <div class="col-md-8 tileBox animate__animated animate__slideInRight">
         <div class="txtHead">
-          <h2> General Information </h2>
-          <h3> </h3>
+          <h2 style="text-align: center; margin-bottom: 20px;">General Information</h2>
         </div>
-        <p>The 5th edition of EPIC will focus on introducing computational techniques for the analysis of scientific data and images by using the programming languages (python, matlab, mathematica) as tools. Instructors will present real research problems to illustrate the use of computational tools in the experimental or theoretical study of physical systems. Basic programming notions are essential to sign up for this workshop.
-The tutorials will focus on the following areas:
-        <ul>
-            <li>Data and image analysis</li>
-            <li>Machine learning</li>
-            <li>Astrophysics and cosmology</li>
-            <li>Biophysics</li>
-            <li>Particle physics</li>
-            <li>Materials science</li>
-            <li>Fluid dynamics</li>
+        <p style="font-size: 16px; line-height: 1.8; text-align: justify;">
+          The 5th edition of EPIC will focus on introducing computational techniques for the analysis of scientific data and images by using programming languages such as Python, MATLAB, and Mathematica as tools. Instructors will present real research problems to illustrate the use of computational tools in the experimental or theoretical study of physical systems. Basic programming notions are essential to sign up for this workshop.
+        </p>
+        <h3 style="margin-top: 20px; text-align: center;">The tutorials will focus on the following areas:</h3>
+        <ul style="font-size: 16px; line-height: 1.8; margin-top: 10px; padding-left: 20px;">
+          <li>Data and image analysis</li>
+          <li>Machine learning</li>
+          <li>Astrophysics and cosmology</li>
+          <li>Biophysics</li>
+          <li>Particle physics</li>
+          <li>Materials science</li>
+          <li>Fluid dynamics</li>
         </ul>
-        EPIC 5 is kindly supported and funded by ICTP’s Physics Without Frontiers (PWF) program and UNESCO-Quito. If you would like to know more about the PWF team, please have a look at their ongoing and previous projects:
-    <a href="https://www.ictp.it/home/physics-without-frontiers" target="_blank">Physics Without Frontiers (PWF) Program</a>
+        <p style="font-size: 16px; line-height: 1.8; margin-top: 20px; text-align: justify;">
+          EPIC 5 is kindly supported and funded by ICTP’s Physics Without Frontiers (PWF) program and UNESCO-Quito. If you would like to know more about the PWF team, please have a look at their ongoing and previous projects:
+          <a href="https://www.ictp.it/home/physics-without-frontiers" target="_blank" style="color: #3498db; text-decoration: underline;">Physics Without Frontiers (PWF) Program</a>.
         </p>
       </div>
-      <!-- end: --> 
     </div>
   </div>
 </section>
@@ -118,171 +269,154 @@ The tutorials will focus on the following areas:
 <section id="quote" class="bg-parlex">
   <div class="parlex-back">
     <div class="container">
-     <div class="row">
-	<div class="col-md-12">      <h2>“Dreams are extremely important. You can’t do it unless you imagine it.” <span>-George Lucas</span></h2></div>
+      <div class="row">
+        <div class="col-md-12 animate__animated animate__bounceIn">
+          <h2>“Dreams are extremely important. You can’t do it unless you imagine it.” <span>-George Lucas</span></h2>
+        </div>
       </div>
     </div>
-    <!--/.container--> 
   </div>
 </section>
 
 <!--application-->
 <section id="application" class="secPad white" style="margin-top: 5px; padding-bottom: 10px;">
-  <div class="container">
-    <div class="heading "> 
-    <h2>Application process</h2>
-        <p>There will be 2 remote application rounds:</p>
-        <div class="row">
-          <div class="column" style="background-color:#aaa;">
-            <h2>Stage 1: First Round (1 April - 16 May)</h2>
-                <p><strong>Application Deadline:</strong> 30 April</p>
-                <!--<p><strong>Responsible Units:</strong> Computational Physics Club @ YT, Latitud Cero Group</p>
-                <p><strong>Problems by:</strong> Computational Physics Club @ YT</p>-->
-                <p><strong>Stage 1 contest:</strong> 7 - 9 May</p>
-                <p><strong>Publication of Stage 1 results:</strong> 12 - 16 May</p>
-
-                <h4>Format:</h4>
-                <ul>
-                    <li>Single challenge focused on fundamental data science skills, machine learning, and physics-motivated problems.</li>
-                    <li>Participants work with a provided dataset to demonstrate predictive modeling capabilities.</li>
-                    <li>Time-limited environment (72 hours maximum).</li>
-                    <li>Evaluation based on model performance metrics and code quality.</li>
-                    <li>Teams with >70% qualify for the Second Round.</li>
-                    <li>Clear benchmark for advancement to Stage 2.</li>
-                    <li>Participants must be in groups of 2.</li>
-                </ul>
-
-                <!--<h4>Challenge Theme Recommendations:</h4>
-                <ul>
-                    <li>Healthcare Analytics: Disease prediction, medical imaging, patient outcome forecasting</li>
-                    <li>Financial Technology: Risk assessment, fraud detection, market prediction</li>
-                    <li>Sustainability: Environmental impact modeling, resource optimization, climate analytics</li>
-                    <li>Urban Planning: Traffic prediction, infrastructure optimization, public service allocation</li>
-                </ul>-->
-          </div>
-          <div class="column" style="background-color:#bbb;">
-            <h2>Stage 2: Second Round (17 May - 15 June)</h2>
-                <!--<p><strong>Responsible Units:</strong> Computational Physics Club @ YT, Latitud Cero Group</p>
-                <p><strong>Problems by:</strong> Computational Physics Club @ YT and Latitud Cero Group</p>-->
-                <p><strong>Stage 2 contest:</strong> 18 - 20 June</p>
-                <p><strong>Publication of Stage 2 results:</strong> 30 June</p>
-
-                <h4>Format:</h4>
-                <ul>
-                    <li>Only groups who passed Stage 1 compete.</li>
-                    <li>Participants work on three challenges addressing real-world AI/ML problems.</li>
-                    <li>Time-limited environment (1 week maximum).</li>
-                    <li>Only 10 teams qualify for EPIC V.</li>
-                </ul>
-
-                <!--<h4>Challenge Theme Recommendations:</h4>
-                <ul>
-                    <li>Predictive Analytics Challenge: Develop models to forecast key metrics.</li>
-                    <li>Computer Vision/Multi-modal Challenge: Build systems that interpret visual or combined data formats.</li>
-                </ul>-->
-          </div>
-          <div class="column" style="background-color:#ccc;">
-            <h2>Stage 3: Third (EPIC V) Round (1 July - 8 August)</h2>
-                <!--<p><strong>Responsible Units:</strong> Computational Physics Club @ YT, Latitud Cero Group</p>
-                <p><strong>Problems by:</strong> Latitud Cero Group</p>-->
-                <p><strong>Stage 3 contest:</strong> 1 July - 8 August 2025</p>
-                <p><strong>Publication of Stage 3 results:</strong> 8 August 2025</p>
-                <p><strong>EPIC V:</strong> 4 - 8 August 2025</p>
-
-                <h4>Format:</h4>
-                <ul>
-                    <li>Only groups who passed Stage 2 compete in EPIC V.</li>
-                    <li>Participants work on three research challenges.</li>
-                </ul>
+  <div class="container heading animate__animated animate__fadeIn">
+    <h2 data-aos="fade-up">Application process</h2>
+    <p data-aos="fade-up" data-aos-delay="200">There will be 2 remote application rounds:</p>
+    <div class="countdown-container">
+      <div class="countdown-title">Time Remaining Until Application Deadline</div>
+      <div id="countdown-timer"></div>
+    </div>
+    <div class="timeline">
+      <div class="timeline-container left">
+        <div class="timeline-content" onclick="toggleDetails(this)">
+          <h2>Stage 1: First Round</h2>
+          <p class="date">1 April - 16 May</p>
+          <div class="details">
+            <p><strong>Application Deadline:</strong> 30 April</p>
+            <p><strong>Stage 1 contest:</strong> 7 - 9 May</p>
+            <p><strong>Publication of Stage 1 results:</strong> 12 - 16 May</p>
+            <h4>Format:</h4>
+            <ul>
+              <li>Single challenge focused on fundamental data science skills, machine learning, and physics-motivated problems.</li>
+              <li>Participants work with a provided dataset to demonstrate predictive modeling capabilities.</li>
+              <li>Time-limited environment (72 hours maximum).</li>
+              <li>Evaluation based on model performance metrics and code quality.</li>
+              <li>Teams with >70% qualify for the Second Round.</li>
+              <li>Clear benchmark for advancement to Stage 2.</li>
+              <li>Participants must be in groups of 2.</li>
+            </ul>
           </div>
         </div>
+      </div>
+      <div class="timeline-container right">
+        <div class="timeline-content" onclick="toggleDetails(this)">
+          <h2>Stage 2: Second Round</h2>
+          <p class="date">17 May - 15 June</p>
+          <div class="details">
+            <p><strong>Stage 2 contest:</strong> 18 - 20 June</p>
+            <p><strong>Publication of Stage 2 results:</strong> 30 June</p>
+            <h4>Format:</h4>
+            <ul>
+              <li>Only groups who passed Stage 1 compete.</li>
+              <li>Participants work on three challenges addressing real-world AI/ML problems.</li>
+              <li>Time-limited environment (1 week maximum).</li>
+              <li>Only 10 teams qualify for EPIC V.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-container left">
+        <div class="timeline-content" onclick="toggleDetails(this)">
+          <h2>Stage 3: Third Round</h2>
+          <p class="date">1 July - 8 August</p>
+          <div class="details">
+            <p><strong>Stage 3 contest:</strong> 1 July - 8 August 2025</p>
+            <p><strong>Publication of Stage 3 results:</strong> 8 August 2025</p>
+            <p><strong>EPIC V:</strong> 4 - 8 August 2025</p>
+            <h4>Format:</h4>
+            <ul>
+              <li>Only groups who passed Stage 2 compete in EPIC V.</li>
+              <li>Participants work on three research challenges.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <h4>Evaluation Methodology</h4>
-        <table border="1">
-            <tr>
-                <th>Criteria</th>
-                <th>Insufficient (0 Points)</th>
-                <th>Fair (1 Point)</th>
-                <th>Good (2 Points)</th>
-                <th>Excellent (3 Points)</th>
-            </tr>
-            <tr>
-                <td>Correctness (30%)</td>
-                <td>Solution appears unrelated to the problem.</td>
-                <td>Solution might address the challenge with substantial modifications.</td>
-                <td>Solution appears to solve the problem.</td>
-                <td>Solution solves the problem and provides additional benefits.</td>
-            </tr>
-            <tr>
-                <td>Sophistication (30%)</td>
-                <td>Overly simplistic solution.</td>
-                <td>Minimally complex, addressing few constraints.</td>
-                <td>Moderately complex, addressing some constraints.</td>
-                <td>Successfully identifies and addresses key constraints.</td>
-            </tr>
-            <tr>
-                <td>Implementation (30%)</td>
-                <td>Not possible to implement.</td>
-                <td>Possible to implement with substantial modifications.</td>
-                <td>Possible to implement with minor modifications.</td>
-                <td>Readily implementable.</td>
-            </tr>
-            <tr>
-                <td>Coherence (10%)</td>
-                <td>Unorganized and unclear language.</td>
-                <td>Requires substantial revision.</td>
-                <td>Logically arranged, minimal revision needed.</td>
-                <td>Highly comprehensible, no revision needed.</td>
-            </tr>
-        </table>
-
-        <!--<h4>Technical Implementation:</h4>
-        <ul>
-            <li>Curated datasets with clear problem statements.</li>
-            <li>Standardized computational environments (cloud-based or local).</li>
-            <li>Submission via GitHub pull requests with structured documentation.</li>
-        </ul>
-
-        <h4>Prize Structure:</h4>
-        <ul>
-            <li>Top performers receive premium industry tool subscriptions.</li>
-            <li>Recognition on hackathon website and social media.</li>
-            <li>Industry mentorship opportunities.</li>
-            <li>Potential project incubation with sponsors.</li>
-            <li>Monetary prizes (TBD).</li>
-        </ul>
-
-        <h4>Remote Participation Support:</h4>
-        <ul>
-            <li>Live virtual ceremonies.</li>
-            <li>Dedicated Discord channels for collaboration.</li>
-            <li>Technical support and cloud computing credits.</li>
-        </ul>-->
-
+<section id="evaluationMethodology" class="secPad white" style="margin-top: 5px; padding-bottom: 10px;">
+  <div class="container">
+    <div class="heading animate__animated animate__fadeIn">
+      <h4>Evaluation Methodology</h4>
+      <table border="1" style="width: 100%; border-collapse: collapse; text-align: left;">
+        <thead>
+          <tr>
+            <th>Criteria</th>
+            <th>Insufficient (0 Points)</th>
+            <th>Fair (1 Point)</th>
+            <th>Good (2 Points)</th>
+            <th>Excellent (3 Points)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Correctness (30%)</td>
+            <td>Solution appears unrelated to the problem.</td>
+            <td>Solution might address the challenge with substantial modifications.</td>
+            <td>Solution appears to solve the problem.</td>
+            <td>Solution solves the problem and provides additional benefits.</td>
+          </tr>
+          <tr>
+            <td>Sophistication (30%)</td>
+            <td>Overly simplistic solution.</td>
+            <td>Minimally complex, addressing few constraints.</td>
+            <td>Moderately complex, addressing some constraints.</td>
+            <td>Successfully identifies and addresses key constraints.</td>
+          </tr>
+          <tr>
+            <td>Implementation (30%)</td>
+            <td>Not possible to implement.</td>
+            <td>Possible to implement with substantial modifications.</td>
+            <td>Possible to implement with minor modifications.</td>
+            <td>Readily implementable.</td>
+          </tr>
+          <tr>
+            <td>Coherence (10%)</td>
+            <td>Unorganized and unclear language.</td>
+            <td>Requires substantial revision.</td>
+            <td>Logically arranged, minimal revision needed.</td>
+            <td>Highly comprehensible, no revision needed.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
 <!--registration-->
-<section id="registration" class="secPad" style="margin-top: 5px; margin-bottom: 5px; padding-top: 10px; padding-bottom: 10px;">
-<div class="container">
-<div class="heading"> 
-  <!-- Heading -->
-  <h2>registration</h2>
-  <br/>
-  <h4>Registration is now open.</h4>
-  <p>We welcome applications from undergraduate students and MSc students working on any field of natural sciences and/or computer sciences and who wish to expand their scientific computing skills. While we will review all applications, we will give preference to applicants from Latin American countries (owing to the limited available funds) and to students who have not participated in previous editions of EPIC. We are also fully committed to reducing the existing gender gap in academia, so half of our scholarships will be allocated to female applicants. Female applicants are particularly welcome to apply, and we will have a dedicated session on Women in STEM as part of EPIC 5 .</p>  
-  <p>To complete your registration, please click the link below.</p>
-
-<!-- Register Button -->
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSevJ9hGuDj8K0xPC8_1JOenec4DZY2Pg4j24Sq-NuruOR0XIw/viewform?usp=dialog" target="_blank" class="btn btn-primary btn-lg">
-        Register Here
-      </a>
-</div>
-</div>		
+<section id="registration" class="secPad" style="margin-top: 20px; padding: 20px 0; background-color: #f9f9f9;">
+  <div class="container">
+    <div class="heading"> 
+      <h2>Registration</h2>
+      <p style="font-size: 16px; line-height: 1.8;">
+        Registration is now open! We welcome applications from undergraduate and MSc students in natural or computer sciences who wish to expand their scientific computing skills. Preference will be given to applicants from Latin American countries and students who have not participated in previous editions of EPIC.
+      </p>
+      <p style="font-size: 16px; line-height: 1.8;">
+        We are committed to reducing the gender gap in academia. Half of our scholarships will be allocated to female applicants. Female students are particularly encouraged to apply, and we will host a dedicated session on Women in STEM as part of EPIC 5.
+      </p>
+      <p style="font-size: 16px; line-height: 1.8;">
+        To complete your registration, please click the button below:
+      </p>
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSevJ9hGuDj8K0xPC8_1JOenec4DZY2Pg4j24Sq-NuruOR0XIw/viewform?usp=dialog" target="_blank" class="btn btn-primary btn-lg">
+          Register Here
+        </a>
+      </div>
+    </div>
+  </div>		
 </section>
-
-
-
 
 <!--venue-->
 <section id="venue" class="secPad" style="margin-top: 5px;">
@@ -303,55 +437,187 @@ The tutorials will focus on the following areas:
   <div class="col-md-4 tileBox"> <img src="images/uide_campus_2.jpg" alt="me"/> </div>
 </div>
 
-<div class="row"> 
-    <h3>Website</h3>
-    <p><a href="https://www.uide.edu.ec/" target="_blank">Visit UIDE Website</a></p>
-
-    <h3>Event Details</h3>
-    <ul>
-        <li><strong>School Dates:</strong> 4-8th August 2025</li>
-        <li><strong>Format:</strong> In person</li>
-        <li><strong>Duration:</strong> 5 days</li>
-        <li><strong>Time investment:</strong> 40 hours</li>
-        <li><strong>Cost:</strong> There is no registration fee</li>
-    </ul>
-
-    <h3>Deadline</h3>
-    <p>The applications for EPIC 5 are open until <strong>30th April 2025</strong>.</p>
-
+<div class="row">
+    <h3>Interactive Map</h3>
+    <div style="width: 100%; height: 400px;">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7815465074127!2d-78.47110212420631!3d-0.24599759975157964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d597638b0399b7%3A0x6584fbf0c60146da!2sUniversidad%20Internacional%20del%20Ecuador%20-%20UIDE%20Quito!5e0!3m2!1ses-419!2sec!4v1744081592806!5m2!1ses-419!2sec" 
+        width="100%" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
 </div>
 
-<div class="row">
-    <h3>ORGANIZED BY</h3>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/photo-1.jpg" width="180" alt="Name">
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/LOGOTIPO-YACHAY-TECH-UITEY-2023.png" width="300" alt="Name">
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/udla_2.png" width="350" alt="Name">
-	</div>
+<div class="row text-center" style="padding: 20px 0;">
+  <h3 style="margin-bottom: 20px;">Organized By</h3>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: nowrap;">
+    <img src="images/photo-1.jpg" width="180" alt="Name">
+    <img src="images/LOGOTIPO-YACHAY-TECH-UITEY-2023.png" width="300" alt="Name">
+    <img src="images/udla_2.png" width="350" alt="Name">
+    <img src="images/uide.png" width="200" alt="Name">
+    <img src="images/club_logo.png" width="200" alt="Name">
+  </div>
 </div>		
 
-<div class="row">
-	<div class="col-md-3 col-sm-6">
-		<img src="images/uide.png" width="200" alt="Name">
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/club_logo.png" width="200" alt="Name">
-	</div>
-</div>		
+<div class="row text-center" style="padding: 20px 0;">
+  <h3 style="margin-bottom: 20px;">With the Kind Support Of</h3>
+  <div style="display: flex; justify-content: center; align-items: center; gap: 20px; flex-wrap: nowrap;">
+    <img src="images/UNESCO_logo_hor_blue.png" width="250" alt="Name">
+    <img src="images/pwf-bw.png" width="250" alt="Name">
+  </div>
+</div>
 
-<div class="row">
-    <h3>WITH THE KIND SUPPORT OF</h3>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/UNESCO_logo_hor_blue.png" width="250" alt="Name">
-	</div>
-	<div class="col-md-3 col-sm-6">
-		<img src="images/pwf-bw.png" width="250" alt="Name">
-	</div>
-</div>		
+</section>
+
+<!--Mentors-->
+<section id="mentors" class="secPad">
+  <div class="container">
+    <div class="heading">
+      <h2>Meet the Mentors</h2>
+      <p>Learn from experts in the field of computational science who will guide you through EPIC V</p>
+    </div>
+    
+    <div class="row mentor-grid">
+      <!-- Mentor 1 -->
+      <div class="col-md-4 col-sm-6 mentor-card">
+        <div class="mentor-img-container">
+          <img src="/api/placeholder/300/300" alt="Mentor 1" class="mentor-img">
+          <div class="mentor-social">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="mentor-info">
+          <h3>Dr. Ana Rodríguez</h3>
+          <p class="mentor-title">Computational Astrophysics</p>
+          <p class="mentor-bio">Specializes in computational methods for astrophysical simulations and data analysis. Has worked on various projects related to galaxy formation and evolution.</p>
+          <button class="btn btn-primary btn-sm mentor-more" data-mentor="mentor1">Read More</button>
+        </div>
+      </div>
+      
+      <!-- Mentor 2 -->
+      <div class="col-md-4 col-sm-6 mentor-card">
+        <div class="mentor-img-container">
+          <img src="/api/placeholder/300/300" alt="Mentor 2" class="mentor-img">
+          <div class="mentor-social">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="mentor-info">
+          <h3>Prof. Carlos Mendoza</h3>
+          <p class="mentor-title">Machine Learning & Biophysics</p>
+          <p class="mentor-bio">Expert in applying machine learning techniques to biophysical problems. Has developed innovative algorithms for protein folding prediction.</p>
+          <button class="btn btn-primary btn-sm mentor-more" data-mentor="mentor2">Read More</button>
+        </div>
+      </div>
+      
+      <!-- Mentor 3 -->
+      <div class="col-md-4 col-sm-6 mentor-card">
+        <div class="mentor-img-container">
+          <img src="/api/placeholder/300/300" alt="Mentor 3" class="mentor-img">
+          <div class="mentor-social">
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="mentor-info">
+          <h3>Dr. María Gutiérrez</h3>
+          <p class="mentor-title">Data Science & Image Analysis</p>
+          <p class="mentor-bio">Specializes in advanced image processing techniques and data visualization. Has contributed to projects in medical imaging and remote sensing.</p>
+          <button class="btn btn-primary btn-sm mentor-more" data-mentor="mentor3">Read More</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mentor Modal -->
+  <div class="modal fade" id="mentorModal" tabindex="-1" role="dialog" aria-labelledby="mentorModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mentorModalLabel">Mentor Profile</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Content will be loaded dynamically -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--FAQ-->
+<section id="faq" class="secPad">
+  <div class="container">
+    <div class="heading">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Who can apply to EPIC V?</h4>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We welcome applications from undergraduate students and MSc students working on any field of natural sciences and/or computer sciences who wish to expand their scientific computing skills. While we review all applications, preference is given to applicants from Latin American countries and to students who have not participated in previous editions of EPIC.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Do I need programming experience?</h4>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Basic programming notions are essential to sign up for this workshop. Familiarity with Python is recommended as it will be the primary language used throughout the competition.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Is there a registration fee?</h4>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>No, there is no registration fee for EPIC V. The event is fully funded by ICTP's Physics Without Frontiers (PWF) program and UNESCO-Quito.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Can I participate remotely?</h4>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>The first two stages of the competition are conducted remotely. However, the final stage (EPIC V) will be held in person at Universidad Internacional del Ecuador (UIDE) in Quito.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <h4>Do I need to be part of a team?</h4>
+          <span class="toggle-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, participants must work in groups of 2. You can register with a partner or request to be matched with another participant.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!--Contact -->
@@ -391,7 +657,16 @@ The tutorials will focus on the following areas:
 <script src="js/jquery.nav.js" type="text/javascript"></script> 
 <script src="js/jquery.cslider.js" type="text/javascript"></script> 
 <script src="js/jquery.diagram.js"></script> 
-<script src="js/custom.js" type="text/javascript"></script> 
+<script src="js/custom.js"></script> 
 <script src="js/owl-carousel/owl.carousel.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="js/countdown.js"></script>
+<script src="js/mentors.js"></script>
+<script>
+  AOS.init();
+  function toggleDetails(element) {
+    element.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
