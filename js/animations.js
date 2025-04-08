@@ -1,4 +1,4 @@
-// Add this to a new file called animations.js
+
 document.addEventListener('DOMContentLoaded', function() {
     // Create the Intersection Observer
     const observer = new IntersectionObserver((entries) => {

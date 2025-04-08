@@ -2,35 +2,37 @@ document.addEventListener('DOMContentLoaded', function() {
   // Mentor data
   const mentorData = {
     mentor1: {
-      name: "Dr. Ana Rodríguez",
+      name: "Wladimir Banda, Ph.D.",
       title: "Computational Astrophysics",
-      bio: "Dr. Ana Rodríguez is a leading researcher in computational astrophysics with over 15 years of experience. She completed her Ph.D. at the University of Barcelona and has held positions at prestigious institutions including MIT and the Max Planck Institute for Astrophysics. Her research focuses on developing novel computational methods for simulating galaxy formation and evolution, with a particular emphasis on dark matter interactions. She has published over 50 papers in high-impact journals and mentored numerous graduate students.",
+      bio: "I am a computational astrophysicist working at the boundary between astrophysical gas dynamics and magnetohydrodynamics. I am originally from Quito, Ecuador. I did my undergraduate studies at the Physics Department of Escuela Politécnica Nacional in Quito, and completed my PhD at the Research School of Astronomy and Astrophysics of the Australian National University in Canberra. I have worked as a physics lecturer and astrophysics researcher at several institutes, including Ecuador’s Meteorology Office (INAMHI), Observatorio Astronómico de Quito, Universidad Técnica de Ambato, Hamburg Observatory of Hamburg University, and more recently I joined Universidad Yachay Tech in Urcuquí. The main tools for my research are supercomputers. I use them to numerically simulate astrophysical gases in both the interstellar and circumgalactic media. I study how such flows evolve under different initial environmental conditions and relate the results to telescope observations of e.g. dense gas clouds embedded in hot winds, high-velocity clouds in galactic outflows, and turbulent clouds in the Galactic centre.",
       achievements: [
-        "Developed the GalaxyFormation.py framework for high-performance astrophysical simulations",
-        "Lead researcher on the COSMOS dark matter mapping project",
-        "2022 Recipient of the National Science Foundation's CAREER Award",
-        "Guest lecturer at universities across Europe and the Americas"
+        "Shock-multicloud interactions in galactic outflows – II. Radiative fractal clouds and cold gas thermodynamics",
+        "Structure and kinematics of shocked gas in Sgr B2: further evidence of a cloud-cloud collision from SiO emission maps",
+        "Shock-multicloud interactions in galactic outflows – I. Cloud layers with lognormal density distributions",
+        "Filament formation in wind-cloud interactions. II. Clouds with turbulent density, velocity, and magnetic fields"
       ],
       courses: [
-        "Advanced Numerical Methods for Astrophysics",
-        "Data Analysis Techniques for Large Astronomical Datasets",
-        "Introduction to Parallel Computing for Scientific Applications"
+        "Magnetohydrodynamics",
+        "Astrophysical gas dynamics",
+        "Computational fluid mechanics",
+        "Galactic winds and the Galactic centre"
       ]
     },
     mentor2: {
-      name: "Prof. Carlos Mendoza",
-      title: "Machine Learning & Biophysics",
-      bio: "Professor Carlos Mendoza bridges the fields of machine learning and biophysics, creating innovative approaches to complex biological problems. After receiving his Ph.D. from Stanford University, he pioneered new computational methods for predicting protein structure and function. His interdisciplinary approach has led to breakthroughs in drug discovery and molecular dynamics simulations. He currently leads the Computational Biophysics Laboratory at Universidad Yachay Tech.",
+      name: "Helga Dénes, Ph.D.",
+      title: "Radio Astronomy & Astrophysics",
+      bio: "Helga Dénes has a Masters degree in Astronomy from the Eötwös Lórand University in Budapest, Hungary. She obtain her PhD in Astrophysics in 2015 from Swinburne University of Technology in Melbourne, Australia. After her PhD she was a postdoctoral researcher jointly at CSIRO Astronomy and Space Science in Sydney and at The Australian National University in Canberra, Australia. After finishing her position in Sydney she was a postdoctoral researcher at ASTRON, The Netherlands Institute for Radio Astronomy. At the moment she is a Professor at Yachay Tech University in the School of Physical Sciences and Nanotechnology. Helga’s main scientific interest is how the gas content of galaxies influences their evolution. She works on both extragalactic and Galactic astrophysics topics and is a member of several large radio astronomy survey teams, such as the Apertif Imaging Surveys, the WALLABY Survey and the GASKAP Survey. She is a member of the International Astronomical Union (IAU) and the Astronomical Society of Australia (ASA).",
       achievements: [
-        "Creator of the BioPredictML algorithm for protein folding prediction",
-        "Principal investigator on multiple NIH and NSF-funded research projects",
-        "Published over 30 papers in journals including Nature Methods and PNAS",
-        "Developed open-source tools used by thousands of researchers worldwide"
+        "New H I scaling relations to probe the H I content of galaxies via global H I-deficiency maps.",
+        "Cold gas outflows from the Small Magellanic Cloud traced with ASKAP.",
+        "H I-deficient galaxies in intermediate-density environments.",
+        "Calibrating the HISA temperature: Measuring the temperature of the Riegel-Crutcher cloud."
       ],
       courses: [
-        "Machine Learning for Molecular Biology",
-        "Computational Methods in Drug Discovery",
-        "Statistical Physics of Biological Systems"
+        "Galaxy evolution",
+        "Gas content of galaxies",
+        "Interstellar medium",
+        "Radio astronomy surveys"
       ]
     },
     mentor3: {
