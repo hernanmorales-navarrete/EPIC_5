@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Mentor data
   const mentorData = {
     mentor1: {
-      name: "Wladimir Banda, Ph.D.",
-      title: "Computational Astrophysics",
-      bio: "I am a computational astrophysicist working at the boundary between astrophysical gas dynamics and magnetohydrodynamics. I am originally from Quito, Ecuador. I did my undergraduate studies at the Physics Department of Escuela Politécnica Nacional in Quito, and completed my PhD at the Research School of Astronomy and Astrophysics of the Australian National University in Canberra. I have worked as a physics lecturer and astrophysics researcher at several institutes, including Ecuador’s Meteorology Office (INAMHI), Observatorio Astronómico de Quito, Universidad Técnica de Ambato, Hamburg Observatory of Hamburg University, and more recently I joined Universidad Yachay Tech in Urcuquí. The main tools for my research are supercomputers. I use them to numerically simulate astrophysical gases in both the interstellar and circumgalactic media. I study how such flows evolve under different initial environmental conditions and relate the results to telescope observations of e.g. dense gas clouds embedded in hot winds, high-velocity clouds in galactic outflows, and turbulent clouds in the Galactic centre.",
+      name: "Andrés Morales-Navarrete, Ph.D.",
+      title: "Computational Biophysics",
+      bio: "Hernán Andrés Morales-Navarrete holds a PhD in computational Biology from the Max Planck Institute of Molecular Cell Biology and Genetics in Dresden, Germany, with a specialization in bioimage analysis, machine learning, and computational embryology. Currently, he is a Research Professor at Universidad de Las Américas in Quito, Ecuador. Hernán Andrés has extensive experience in computational research and programming education. He has received multiple international recognitions, including awards from Nature Methods (part of the Method of the year 2023). As a mentor for the programming school's hackathon, Hernán enthusiastically supports students in developing innovative solutions through computational thinking and advanced AI programming techniques.",
       achievements: [
         "Shock-multicloud interactions in galactic outflows – II. Radiative fractal clouds and cold gas thermodynamics",
         "Structure and kinematics of shocked gas in Sgr B2: further evidence of a cloud-cloud collision from SiO emission maps",
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
       ]
     },
     mentor3: {
-      name: "Dr. María Gutiérrez",
-      title: "Data Science & Image Analysis",
+      name: "Paulina Vizcaino, PhD",
+      title: "Specializes in computing science and education.",
       bio: "Dr. María Gutiérrez specializes in the intersection of data science and image analysis, with applications ranging from medical imaging to remote sensing. She earned her doctorate from the Technical University of Madrid before joining the research faculty at Universidad de las Américas. Her work focuses on developing algorithms that can extract meaningful information from complex image datasets, with particular interest in neural network architectures for image segmentation and classification.",
       achievements: [
         "Developer of ImageAnalyticsPro, an open-source toolkit for scientific image processing",
@@ -50,7 +50,58 @@ document.addEventListener('DOMContentLoaded', function() {
         "Neural Networks for Image Processing",
         "Scientific Visualization Techniques"
       ]
-    }
+    },
+    mentor4: {
+      name: "Wladimir Banda, Ph.D.",
+      title: "Computational Astrophysics",
+      bio: "I am a computational astrophysicist working at the boundary between astrophysical gas dynamics and magnetohydrodynamics. I am originally from Quito, Ecuador. I did my undergraduate studies at the Physics Department of Escuela Politécnica Nacional in Quito, and completed my PhD at the Research School of Astronomy and Astrophysics of the Australian National University in Canberra. I have worked as a physics lecturer and astrophysics researcher at several institutes, including Ecuador’s Meteorology Office (INAMHI), Observatorio Astronómico de Quito, Universidad Técnica de Ambato, Hamburg Observatory of Hamburg University, and more recently I joined Universidad Yachay Tech in Urcuquí. The main tools for my research are supercomputers. I use them to numerically simulate astrophysical gases in both the interstellar and circumgalactic media. I study how such flows evolve under different initial environmental conditions and relate the results to telescope observations of e.g. dense gas clouds embedded in hot winds, high-velocity clouds in galactic outflows, and turbulent clouds in the Galactic centre.",
+      achievements: [
+        "Shock-multicloud interactions in galactic outflows – II. Radiative fractal clouds and cold gas thermodynamics",
+        "Structure and kinematics of shocked gas in Sgr B2: further evidence of a cloud-cloud collision from SiO emission maps",
+        "Shock-multicloud interactions in galactic outflows – I. Cloud layers with lognormal density distributions",
+        "Filament formation in wind-cloud interactions. II. Clouds with turbulent density, velocity, and magnetic fields"
+      ],
+      courses: [
+        "Magnetohydrodynamics",
+        "Astrophysical gas dynamics",
+        "Computational fluid mechanics",
+        "Galactic winds and the Galactic centre"
+      ]
+    },
+    mentor5: {
+      name: "Wladimir Banda, Ph.D.",
+      title: "Computational Astrophysics",
+      bio: "I am a computational astrophysicist working at the boundary between astrophysical gas dynamics and magnetohydrodynamics. I am originally from Quito, Ecuador. I did my undergraduate studies at the Physics Department of Escuela Politécnica Nacional in Quito, and completed my PhD at the Research School of Astronomy and Astrophysics of the Australian National University in Canberra. I have worked as a physics lecturer and astrophysics researcher at several institutes, including Ecuador’s Meteorology Office (INAMHI), Observatorio Astronómico de Quito, Universidad Técnica de Ambato, Hamburg Observatory of Hamburg University, and more recently I joined Universidad Yachay Tech in Urcuquí. The main tools for my research are supercomputers. I use them to numerically simulate astrophysical gases in both the interstellar and circumgalactic media. I study how such flows evolve under different initial environmental conditions and relate the results to telescope observations of e.g. dense gas clouds embedded in hot winds, high-velocity clouds in galactic outflows, and turbulent clouds in the Galactic centre.",
+      achievements: [
+        "Shock-multicloud interactions in galactic outflows – II. Radiative fractal clouds and cold gas thermodynamics",
+        "Structure and kinematics of shocked gas in Sgr B2: further evidence of a cloud-cloud collision from SiO emission maps",
+        "Shock-multicloud interactions in galactic outflows – I. Cloud layers with lognormal density distributions",
+        "Filament formation in wind-cloud interactions. II. Clouds with turbulent density, velocity, and magnetic fields"
+      ],
+      courses: [
+        "Magnetohydrodynamics",
+        "Astrophysical gas dynamics",
+        "Computational fluid mechanics",
+        "Galactic winds and the Galactic centre"
+      ]
+    },
+    mentor6: {
+      name: "Wladimir Banda, Ph.D.",
+      title: "Computational Astrophysics",
+      bio: "I am a computational astrophysicist working at the boundary between astrophysical gas dynamics and magnetohydrodynamics. I am originally from Quito, Ecuador. I did my undergraduate studies at the Physics Department of Escuela Politécnica Nacional in Quito, and completed my PhD at the Research School of Astronomy and Astrophysics of the Australian National University in Canberra. I have worked as a physics lecturer and astrophysics researcher at several institutes, including Ecuador’s Meteorology Office (INAMHI), Observatorio Astronómico de Quito, Universidad Técnica de Ambato, Hamburg Observatory of Hamburg University, and more recently I joined Universidad Yachay Tech in Urcuquí. The main tools for my research are supercomputers. I use them to numerically simulate astrophysical gases in both the interstellar and circumgalactic media. I study how such flows evolve under different initial environmental conditions and relate the results to telescope observations of e.g. dense gas clouds embedded in hot winds, high-velocity clouds in galactic outflows, and turbulent clouds in the Galactic centre.",
+      achievements: [
+        "Shock-multicloud interactions in galactic outflows – II. Radiative fractal clouds and cold gas thermodynamics",
+        "Structure and kinematics of shocked gas in Sgr B2: further evidence of a cloud-cloud collision from SiO emission maps",
+        "Shock-multicloud interactions in galactic outflows – I. Cloud layers with lognormal density distributions",
+        "Filament formation in wind-cloud interactions. II. Clouds with turbulent density, velocity, and magnetic fields"
+      ],
+      courses: [
+        "Magnetohydrodynamics",
+        "Astrophysical gas dynamics",
+        "Computational fluid mechanics",
+        "Galactic winds and the Galactic centre"
+      ]
+    },
   };
 
   // Mentor modal functionality
