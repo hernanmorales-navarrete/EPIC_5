@@ -1437,5 +1437,5 @@ tr:hover {
   font-weight: normal;
   text-transform: none;
   line-height: 1.6;
-  color: white;
+  color: white !important;
 }
