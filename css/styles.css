@@ -1421,4 +1421,13 @@ tr:hover {
   margin-top: 10px;
 }
 
+.quote-image {
+  float: left;
+  margin-right: 20px; /* Adjust spacing as needed */
+  max-width: 200px; /* Adjust image size as needed */
+  height: auto;
+}
 
+.quote-text {
+  overflow: hidden; /* Prevent text from wrapping under floated image*/
+}
