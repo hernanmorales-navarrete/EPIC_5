@@ -1423,11 +1423,19 @@ tr:hover {
 
 .quote-image {
   float: left;
-  margin-right: 20px; /* Adjust spacing as needed */
-  max-width: 200px; /* Adjust image size as needed */
+  margin-right: 20px;
+  max-width: 300px;
   height: auto;
 }
 
 .quote-text {
-  overflow: hidden; /* Prevent text from wrapping under floated image*/
+  overflow: hidden;
+}
+
+.quote-content {
+  font-size: 1.2em;
+  font-weight: normal;
+  text-transform: none;
+  line-height: 1.6;
+  color: white;
 }
