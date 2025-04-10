@@ -62,23 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
         "Software Development with Python, Java and  Go "
       ]
     },
-    mentor4: {
-      name: "Wladimir Banda, Ph.D.",
-      title: "Computational Astrophysics",
-      bio: "I am a computational astrophysicist working at the boundary between astrophysical gas dynamics and magnetohydrodynamics. I am originally from Quito, Ecuador. I did my undergraduate studies at the Physics Department of Escuela Politécnica Nacional in Quito, and completed my PhD at the Research School of Astronomy and Astrophysics of the Australian National University in Canberra. I have worked as a physics lecturer and astrophysics researcher at several institutes, including Ecuador’s Meteorology Office (INAMHI), Observatorio Astronómico de Quito, Universidad Técnica de Ambato, Hamburg Observatory of Hamburg University, and more recently I joined Universidad Yachay Tech in Urcuquí. The main tools for my research are supercomputers. I use them to numerically simulate astrophysical gases in both the interstellar and circumgalactic media. I study how such flows evolve under different initial environmental conditions and relate the results to telescope observations of e.g. dense gas clouds embedded in hot winds, high-velocity clouds in galactic outflows, and turbulent clouds in the Galactic centre.",
-      achievements: [
-        "Shock-multicloud interactions in galactic outflows – II. Radiative fractal clouds and cold gas thermodynamics",
-        "Structure and kinematics of shocked gas in Sgr B2: further evidence of a cloud-cloud collision from SiO emission maps",
-        "Shock-multicloud interactions in galactic outflows – I. Cloud layers with lognormal density distributions",
-        "Filament formation in wind-cloud interactions. II. Clouds with turbulent density, velocity, and magnetic fields"
-      ],
-      courses: [
-        "Magnetohydrodynamics",
-        "Astrophysical gas dynamics",
-        "Computational fluid mechanics",
-        "Galactic winds and the Galactic centre"
-      ]
-    },
     mentor5: {
       name: "Wladimir Banda, Ph.D.",
       title: "Computational Astrophysics",
