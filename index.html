@@ -30,144 +30,219 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <style>
-    .timeline {
-      position: relative;
-      max-width: 1200px;
-      margin: 0 auto;
-      font-family: Arial, sans-serif;
-    }
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
 
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #3498db;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+
+  .timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #3498db;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  .left {
+    left: 0;
+  }
+
+  .right {
+    left: 50%;
+  }
+
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #f1f1f1;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #f1f1f1;
+  }
+
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #f1f1f1;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f1f1f1 transparent transparent;
+  }
+
+  .right::after {
+    left: -16px;
+  }
+
+  .timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .timeline-content:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .timeline-content h2 {
+    color: #3498db;
+    margin-top: 0;
+  }
+
+  .timeline-content .date {
+    color: #777;
+    font-style: italic;
+  }
+
+  .timeline-content .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+
+  .timeline-content.active .details {
+    max-height: 500px;
+  }
+
+  @media screen and (max-width: 600px) {
     .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: #3498db;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
+      left: 31px;
     }
 
     .timeline-container {
-      padding: 10px 40px;
-      position: relative;
-      background-color: inherit;
-      width: 50%;
-      box-sizing: border-box;
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
     }
 
-    .timeline-container::after {
-      content: '';
-      position: absolute;
-      width: 25px;
-      height: 25px;
-      right: -17px;
-      background-color: white;
-      border: 4px solid #3498db;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .left {
-      left: 0;
-    }
-
-    .right {
-      left: 50%;
-    }
-
-    .left::before {
-      content: " ";
-      height: 0;
-      position: absolute;
-      top: 22px;
-      width: 0;
-      z-index: 1;
-      right: 30px;
-      border: medium solid #f1f1f1;
-      border-width: 10px 0 10px 10px;
-      border-color: transparent transparent transparent #f1f1f1;
-    }
-
-    .right::before {
-      content: " ";
-      height: 0;
-      position: absolute;
-      top: 22px;
-      width: 0;
-      z-index: 1;
-      left: 30px;
+    .timeline-container::before {
+      left: 60px;
       border: medium solid #f1f1f1;
       border-width: 10px 10px 10px 0;
       border-color: transparent #f1f1f1 transparent transparent;
     }
 
+    .left::after,
     .right::after {
-      left: -16px;
+      left: 15px;
     }
 
-    .timeline-content {
-      padding: 20px 30px;
-      background-color: white;
-      position: relative;
-      border-radius: 6px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      cursor: pointer;
+    .right {
+      left: 0%;
+    }
+  }
+
+  /* Ensure responsiveness for the Dorothy section */
+  .quote-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .quote-text {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    color: white; /* Change text color to white */
+  }
+
+  @media screen and (max-width: 768px) {
+    .quote-text {
+      font-size: 14px;
+      line-height: 1.6;
     }
 
-    .timeline-content:hover {
-      transform: scale(1.03);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    .quote-image {
+      max-width: 200px;
     }
 
-    .timeline-content h2 {
-      color: #3498db;
-      margin-top: 0;
+    .parlex-back .row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
+  }
 
-    .timeline-content .date {
-      color: #777;
-      font-style: italic;
+  /* Add animations to Format and Objectives sections */
+  #formatObjectives .format-section, 
+  #formatObjectives .heading {
+    animation: fadeInUp 0.8s ease-in-out;
+  }
+
+  #formatObjectives ul {
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-
-    .timeline-content .details {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    .timeline-content.active .details {
-      max-height: 500px;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
     }
-
-    @media screen and (max-width: 600px) {
-      .timeline::after {
-        left: 31px;
-      }
-
-      .timeline-container {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-
-      .timeline-container::before {
-        left: 60px;
-        border: medium solid #f1f1f1;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #f1f1f1 transparent transparent;
-      }
-
-      .left::after, .right::after {
-        left: 15px;
-      }
-
-      .right {
-        left: 0%;
-      }
+    to {
+      opacity: 1;
     }
+  }
+
+  /* Add animation to logos */
+  .row.text-center img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+  }
+
+  .row.text-center img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+    opacity: 1; /* Full opacity on hover */
+  }
 </style>
 </head>
 
@@ -275,7 +350,7 @@
           <img src="images/dorothy_vaughan.jpeg" alt="Dorothy Vaughan" class="quote-image">
         </div>
         <div class="col-md-8 quote-text">
-          <p>Dorothy Johnson Vaughan was an American mathematician and human computer who worked for the National Advisory Committee for Aeronautics (NACA), later NASA, at Langley Research Center in Hampton, Virginia. In 1949, she became acting supervisor of the West Area Computers, the first African-American woman to receive a promotion and supervise a group of staff at the center. She later was promoted officially to the position of supervisor. During her 28-year career, Vaughan prepared for the introduction of computers in the early 1960s by teaching herself and her staff the Fortran programming language. She later headed the programming section of the Analysis and Computation Division (ACD) at Langley.</p>
+          <p style="color: white;">Dorothy Johnson Vaughan was an American mathematician and human computer who worked for the National Advisory Committee for Aeronautics (NACA), later NASA, at Langley Research Center in Hampton, Virginia. In 1949, she became acting supervisor of the West Area Computers, the first African-American woman to receive a promotion and supervise a group of staff at the center. She later was promoted officially to the position of supervisor. During her 28-year career, Vaughan prepared for the introduction of computers in the early 1960s by teaching herself and her staff the Fortran programming language. She later headed the programming section of the Analysis and Computation Division (ACD) at Langley.</p>
         </div>
       </div>
     </div>
@@ -654,16 +729,16 @@
     <div class="row mentor-grid">
       <div class="col-md-4 col-sm-6 mentor-card">
         <div class="mentor-img-container">
-          <img src="images/Andres_Morales.jpg" alt="Mentor 1" class="mentor-img">
+          <img src="images/andres_750x750.png" alt="Mentor 1" class="mentor-img">
           <div class="mentor-social">
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/in/hernanandresmoralesnavarrete/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/hernanmorales-navarrete"><i class="fa fa-github"></i></a>
+            <a href="https://x.com/andresm_1986"><i class="fa fa-twitter"></i></a>
           </div>
         </div>
         <div class="mentor-info">
           <h3>Andrés Morales-Navarrete, Ph.D.</h3>
-          <p class="mentor-title">Computational Biophysics</p>
+          <p class="mentor-title">Computational Biophysics & Machine Learning for Biology</p>
           <p class="mentor-bio">Hernán Andrés Morales-Navarrete holds a PhD in computational Biology from the Max Planck Institute of Molecular Cell Biology.</p>
           <button class="btn btn-primary btn-sm mentor-more" data-mentor="mentor1">Read More</button>
         </div>
@@ -671,7 +746,7 @@
 
       <div class="col-md-4 col-sm-6 mentor-card">
         <div class="mentor-img-container">
-          <img src="images/Paulina_Vizcaino.jpg" alt="Mentor 2" class="mentor-img">
+          <img src="images/paulina_750x750.png" alt="Mentor 2" class="mentor-img">
           <div class="mentor-social">
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-github"></i></a>
@@ -688,7 +763,7 @@
 
       <div class="col-md-4 col-sm-6 mentor-card">
         <div class="mentor-img-container">
-          <img src="images/Helga-Denes-perfil-750x750.jpg" alt="Mentor 3" class="mentor-img">
+          <img src="images/helga_750x750.png" alt="Mentor 3" class="mentor-img">
           <div class="mentor-social">
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-github"></i></a>
@@ -707,7 +782,7 @@
     <div class="row mentor-grid">
       <div class="col-md-4 col-sm-6 mentor-card">
         <div class="mentor-img-container">
-          <img src="images/Edison_Salazar.jpg" alt="Mentor 4" class="mentor-img">
+          <img src="images/ivan_750x750.png" alt="Mentor 4" class="mentor-img">
           <div class="mentor-social">
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-github"></i></a>
@@ -715,16 +790,16 @@
           </div>
         </div>
         <div class="mentor-info">
-          <h3>Edison Salazar, PhD</h3>
-          <p class="mentor-title">Mentor 4 Title</p>
-          <p class="mentor-bio">Computational Materials Science.</p>
+          <h3>Iván Reyes Chacón, MgTI, MCs,</h3>
+          <p class="mentor-title">Cybersecurity and Business Technology and Systems Management</p>
+          <p class="mentor-bio">Iván Reyes Chacón, MgTI, MCs, is a prominent leader in the academic and technological fields, with over a decade of experience in university-level management and teaching. </p>
           <button class="btn btn-primary btn-sm mentor-more" data-mentor="mentor4">Read More</button>
         </div>
       </div>
 
       <div class="col-md-4 col-sm-6 mentor-card">
         <div class="mentor-img-container">
-          <img src="images/Lupe_Villegas.jpg" alt="Mentor 5" class="mentor-img">
+          <img src="images/lupe_750x750.png" alt="Mentor 5" class="mentor-img">
           <div class="mentor-social">
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-github"></i></a>
@@ -741,7 +816,7 @@
 
       <div class="col-md-4 col-sm-6 mentor-card">
         <div class="mentor-img-container">
-          <img src="images/webb.jpeg" alt="Mentor 6" class="mentor-img">
+          <img src="images/wladi_750x750.png" alt="Mentor 6" class="mentor-img">
           <div class="mentor-social">
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-github"></i></a>
