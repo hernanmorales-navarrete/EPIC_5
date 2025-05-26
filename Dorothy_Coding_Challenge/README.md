@@ -37,5 +37,5 @@ Further details can be found here: https://ciencialatitud0.github.io/EPIC_5
 
 ## Stage 1 notification date:
 
-Groups that advance to Stage 2 will be notified by **18 May 2025**. Groups that don't advance to Stage 2 will also be notified.
+Groups that advance to Stage 2 will be notified by **20 May 2025**. Groups that don't advance to Stage 2 will also be notified.
 
