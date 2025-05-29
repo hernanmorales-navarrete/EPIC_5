@@ -4,7 +4,7 @@
 
 This year's edition of the Dorothy Coding Challenge will have 3 stages. Stages 1 and 2 are qualifying (online) stages and Stage 3 is the final (in person) stage in Quito (UIDE Campus).
 
-## Stage 1 (7 - 11 May 2025):
+## Stage 1 (7 May - 6 June 2025):
 
 Please read the following instructions very carefully:
 
@@ -37,5 +37,5 @@ Further details can be found here: https://ciencialatitud0.github.io/EPIC_5
 
 ## Stage 1 notification date:
 
-Groups that advance to Stage 2 will be notified by **20 May 2025**. Groups that don't advance to Stage 2 will also be notified.
+Groups that advance to Stage 2 will be notified by **9 June 2025**. Groups that don't advance to Stage 2 will also be notified.
 
