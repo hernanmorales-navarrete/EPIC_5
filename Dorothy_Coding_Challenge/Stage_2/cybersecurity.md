@@ -1,6 +1,6 @@
 # EPIC Challenge AECC Round
 
-# Cybersecuirity: Capture the file
+# Cybersecuirity: Capture the Flag
 
 
 <div align="center" style="background-color: white; padding: 15px; border-radius: 8px; display: inline-block; margin: 0 auto;">
