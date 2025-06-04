@@ -28,8 +28,9 @@ Take unpaired axial slices as input and generate lateral-quality outputs.
 Aim to outperform the provided SelfNet baseline and approach the ground truth (GT).
 
 <div align="center" style="background-color: white; padding: 15px; border-radius: 8px; display: inline-block; margin: 0 auto;">
-  <img src="https://ciencialatitud0.github.io/EPIC_5/images/challenge_stage2.png" width="200">
+  <img src="https://ciencialatitud0.github.io/EPIC_5/images/challenge_stage2.png" width="600">
 </div>
+
 
 ---
 
