@@ -29,9 +29,9 @@ https://github.com/ciencialatitud0/EPIC_5/blob/main/Dorothy_Coding_Challenge/Sta
 
 ## Submission deadline: Sunday 6th July 2025
 
-## Prizes:
+## EPIC 5 Scholarships:
 
-- The members of the 10 qualified teams will receive scholarships to attend EPIC 5 in the UIDE campus in Quito. Food and accommodation will be provided to all finalists during the EPIC School week (4 - 8 August 2025).
+- The members of the 10 qualified teams will receive scholarships to attend EPIC 5 in the UIDE campus in Quito. Food and accommodation will be provided to all finalists during the EPIC V School week (4 - 8 August 2025).
 
 ## Stage 2 notification date:
 
