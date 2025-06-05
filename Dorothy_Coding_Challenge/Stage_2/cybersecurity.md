@@ -33,7 +33,7 @@ According to the provided information, your mission is:
 5. Visualise the content of the target file
 
 ###  Hint 
-You can use the file weight to find it.
+You can use the file size to find the target.
 
 ---
 
