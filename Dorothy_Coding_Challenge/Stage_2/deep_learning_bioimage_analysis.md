@@ -123,7 +123,7 @@ A baseline (SelfNet) and GT results will be provided. Your model should ideally 
 
 ---
 
-##Data Use & Embargo Policy
+## Data Use & Embargo Policy
 By participating, you agree to:
   - Embargo: Do not publish, share, or distribute results, code, or models from the challenge until the joint publication is released (maximum 1 year).
   - Confidentiality: Do not share the dataset outside the Hackathon.
