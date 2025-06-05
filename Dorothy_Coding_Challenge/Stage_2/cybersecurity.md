@@ -30,9 +30,10 @@ According to the provided information, your mission is:
 2. Find a password encrypted with Caesar cipher
 3. Find a target encrypted file
 4. Decrypt the target file using the found password
+5. Visualise the content of the target file
 
 ###  Hint 
-You can use the file weight to find it
+You can use the file weight to find it.
 
 ---
 
@@ -53,20 +54,20 @@ Alternatively, you can access via SSH:
 
 * [Imagen de Docker](https://drive.google.com/drive/u/0/folders/1gY8ZtA_0j8u8SzFG6WW-2v7EmTt2oMSS)
 
-Una vez que descargaste e importaste la imagen con:
+Once you have downloaded the Docker image, load the image with:
 
 ```
 docker load -i epic_challenge_image.tar
 ```
 
-Puedes verificar que está disponible con:
+You can verify the environment with:
 
 ```
 REPOSITORY             TAG       IMAGE ID       CREATED         SIZE
 epic_challenge_image   latest    abcdef123456   x minutes ago   x MB
 ```
 
-Ejecuta esto para probar:
+You can test the environment with:
 
 ```
 docker run -it --name epic_challenge_container epic_challenge_image
