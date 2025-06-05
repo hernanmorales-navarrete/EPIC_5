@@ -41,7 +41,7 @@ You can use the file size to find the target.
 
 ### Via Browser
 
-[Terminal Accesible por el navegador](http://shortline.proxy.rlwy.net:53282/)
+[Terminal accesible from the browser](http://shortline.proxy.rlwy.net:53282/)
 
 ```
 User: epic_guest  
@@ -52,7 +52,7 @@ Password: epic_guest
 
 Alternatively, you can access via SSH:
 
-* [Imagen de Docker](https://drive.google.com/drive/u/0/folders/1gY8ZtA_0j8u8SzFG6WW-2v7EmTt2oMSS)
+* [Docker image](https://drive.google.com/drive/u/0/folders/1gY8ZtA_0j8u8SzFG6WW-2v7EmTt2oMSS)
 
 Once you have downloaded the Docker image, load the image with:
 
