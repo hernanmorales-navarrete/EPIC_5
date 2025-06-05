@@ -57,7 +57,7 @@ xz_patches = patchify(xz_plane, (128, 128), step=64)
 ```
 
 You are encouraged to extract multiple patches from different planes and apply data augmentation.
-
+The dataset can be downloadde from: https://drive.google.com/file/d/1K4s8fmjl8IU5OBGBW_C4rgriOU16XyQj/view?usp=sharing
 ---
 
 ## General Pipeline
