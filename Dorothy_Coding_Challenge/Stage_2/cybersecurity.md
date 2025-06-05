@@ -80,15 +80,14 @@ docker run -it --rm epic_challenge
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[Access via HTTP or Docker]
-    B --> C[Create .sh script to explore folders and decrypt Caesar key]
-    C --> D[Explore folders and search for large file]
-    D --> E[Read and decrypt Caesar key]
+    A[Start] --> B[Access via browser or Docker]
+    B --> C[Create .sh script to explore folders and find file with the key]
+    C --> D[Read and decrypt the key using Caesar cipher]
+    D --> E[Explore folders and search for a large file (target file)]
     E --> F[Use key to decrypt file]
     F --> G[Export decrypted .pdb file to Colab to verify results]
-    G --> H[Review .sh files and .py or .ipynb scripts for result verification]
-    H --> I[Deliver scripts .sh, .py, or .ipynb]
-    I --> J[End]
+    G --> H[Deliver scripts .sh, .py, or .ipynb]
+    H --> I[End]
 ```
 
 ---
