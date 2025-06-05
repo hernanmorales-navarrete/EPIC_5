@@ -100,6 +100,11 @@ The Docker image sets up the following environment:
 * Each main directory contains 5 subdirectories (`maybehere1` to `maybehere5`)
 * Each subdirectory contains 5 files (`file1.txt` to `file5.txt`)
 
+## Verification of captured file
+
+The `.py` or `.ipynb` file should follow this format:
+[Colab Deliverable Example](https://colab.research.google.com/drive/1AG0d2z8kajN1Y8asFLcHd6FqHbgoRZf3?usp=sharing)
+
 ---
 
 ## Deliverable
@@ -109,9 +114,6 @@ You must submit **three files**:
 * A `.sh` script to validate the process used to locate the file.
 * A `.py` or `.ipynb` file to validate the result obtained.
 * The captured .pdb file.
-
-The `.py` or `.ipynb` file should follow this format:
-[Colab Deliverable Example](https://colab.research.google.com/drive/1AG0d2z8kajN1Y8asFLcHd6FqHbgoRZf3?usp=sharing)
 
 ---
 
