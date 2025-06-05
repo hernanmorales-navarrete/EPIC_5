@@ -83,7 +83,7 @@ flowchart TD
     A[Start] --> B[Access via browser or Docker]
     B --> C[Create .sh script to explore folders and find file with the key]
     C --> D[Read and decrypt the key using Caesar cipher]
-    D --> E[Explore folders and search for a large file (target file)]
+    D --> E[Explore folders and search for the large target file]
     E --> F[Use key to decrypt file]
     F --> G[Export decrypted .pdb file to Colab to verify results]
     G --> H[Deliver scripts .sh, .py, or .ipynb]
